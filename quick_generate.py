@@ -55,6 +55,10 @@ def main(count=10):
 
 
 if __name__ == '__main__':
+    # config trait layer.
+    # the layer order is the bottom layer must set first in the list
+    # e.x. Usually the background image is at the top of the list
     trait_layer = ['backgrounds', 'furs', 'hats', 'ears', 'mouths', 'eyes', 'clothes']
+    # the number of unique NFTs you want to generate
     count = 1
     main(count)
