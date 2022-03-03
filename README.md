@@ -23,6 +23,8 @@ pip install -r requirements.txt
 python quick_generate.py
 ```
 
-# Tanks
+# Thanks
 
 Example image using [cyberdoggos](https://github.com/cyberdoggos/generator)
+
+thanks your cool doggos :)
