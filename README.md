@@ -1,16 +1,21 @@
-# What?
+# About
 
-NFT images and matedata simple quick generator
+Simple and quick generator NFT images and matedata with python
 
-metadata for Opensea [standard](https://docs.opensea.io/docs/metadata-standards).
+support Opensea metadata [standard](https://docs.opensea.io/docs/metadata-standards) .
 
 
-# How?
+# How to use
 
  - Copy your images layer file directory to images
- - Config your trait layer in source code
+ - Config probability with your images name. Use # symbol and probability number, the sum of the numbers in the same directory is 100.
+ - Config your trait layer in source code trait_layer
  - Config the number of unique NFTs you want to generate
 ```
+....
+if __name__ == '__main__':
+    ....
+    # config below trait_layer and count
     trait_layer = ['backgrounds', 'furs', 'hats', 'ears', 'mouths', 'eyes', 'clothes']
     count = 1
 ```
@@ -26,5 +31,3 @@ python quick_generate.py
 # Thanks
 
 Example image using [cyberdoggos](https://github.com/cyberdoggos/generator)
-
-thanks your cool doggos :)
