@@ -3,6 +3,7 @@ import numpy as np
 import os
 import random
 import json
+import time
 
 trait_dict = {}
 
@@ -37,7 +38,8 @@ def generate(count):
         for _layer in trait_layer:
             kinds = trait_dict[_layer]
 
-            np.random.seed(tokenId)
+            _seed = tokenId + int(str(int(time.time()*1000))[5:])
+            np.random.seed(_seed)
             # print(kinds)
             rates = rate_filter(kinds)
             p = np.array(rates)
@@ -52,6 +54,7 @@ def generate(count):
         # print(new_nft_kind, new_nft_dir)
         unique_key = ''.join(new_nft_kind)
         if unique.get(unique_key, None) is None:
+            unique[unique_key] = 1
             img = None
             for _dir in new_nft_dir:
                 _img = Image.open(_dir).convert('RGBA')
